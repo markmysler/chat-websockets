@@ -2,10 +2,12 @@ const socket = io("ws://localhost:8080");
 
 socket.on("message", (text) => {
 	const el = document.createElement("li");
-	let msg = text.split(":");
+	let msg = text[0].split(":");
 	msg.shift();
-	const header = text.split(":").splice(0, 1);
-	el.innerHTML = `<label>${header}:</label><p>${msg}</p>`;
+	const header = text[0].split(":").splice(0, 1);
+	el.innerHTML = `<label>${header}:</label><div><p>${msg}</p><p>${
+		text[1].split(" ")[1]
+	}</p></div>`;
 	document.getElementById("messages").prepend(el);
 });
 
