@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CHATROOM</title>
+		<script src="https://cdn.socket.io/socket.io-3.0.0.js"></script>
+		<script defer src="./main.js"></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Sala de chat</h1>
+		</header>
+		<ul id="messages"></ul>
+		<div id="input-div">
+			<textarea placeholder="message" id="message-input"></textarea>
+			<button id="send-btn">Enviar</button>
+		</div>
+	</body>
+</html>
